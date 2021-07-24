@@ -78,7 +78,7 @@
               </ul>
             </fieldset>
             <fieldset class="questionnaire__contacts contacts-field">
-              <legend class="questionnaire__legend">Контактные данные (владельца кота)</legend>
+              <legend class="contacts-field__legend sign">Контактные данные (владельца кота)</legend>
               <ul class="contacts-field__list">
                 <li class="contacts-field__item">
                   <label class="contacts-field__label" for="email">E-mail:*</label>
@@ -90,15 +90,15 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="questionnaire__comment">
-              <legend class="questionnaire__legend">Комментарий</legend>
-              <p class="questionnaire__comment-wrapper">
-                <textarea class="questionnaire__comment-textarea" id="comment" name="comment"></textarea>
-                <label class="questionnaire__comment-label" for="comment">Расскажите обо всех повадках кота</label>   <!--Тут я осознанно в лэйбл поместил, если это ошибка-исправлю-->
+            <fieldset class="questionnaire__comment comment-field">
+              <legend class="comment-field__legend sign">Комментарий</legend>
+              <p class="comment-field__wrapper">
+                <textarea class="comment-field__textarea" id="comment" name="comment"></textarea>
+                <label class="comment-field__label" for="comment">Расскажите обо всех повадках кота</label>   <!--Тут я осознанно в лэйбл поместил, если это ошибка-исправлю-->
               </p>
             </fieldset>
             <fieldset class="questionnaire__addition addition-field">
-              <legend class="questionnaire__legend">Дополнительно</legend>
+              <legend class="addition-field__legend sign">Дополнительно</legend>
               <ul class="addition-field__list">
                 <li class="addition-field__item">
                   <input class="addition-field__input" id="sugar" type="checkbox" name="sugar" checked>
@@ -119,24 +119,22 @@
               </ul>
             </fieldset>
             <button class="questionnaire__button button button--green" type="submit">Отправить заявку</button>
-            <strong>* — Обязательные поля</strong>
+            <strong class="questionnaire__note">* — Обязательные поля</strong>
           </form>
         </div>
       </section>
-      <section class="partnership">
-        <div class="partnership__wrapper">
-          <div class="partnership__info">
-            <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <address class="partnership__address">
-              ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
-            </address>
-          </div>
+      <section class="info">
+        <h2 class="visually-hidden">Информация о компании</h2>
+        <div class="info__wrapper">
+          <h3 class="info__title">Приглашаем к сотрудничеству дилеров!</h3>
+          <address class="info__address">
+            ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+          </address>
         </div>
-      </section>
-      <section class="map">
-        <h2 class="visually-hidden">Расположение компании</h2>
-        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.326557332854!2d30.314830298559226!3d59.93908396681588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1626901145311!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" title="Карта с изображением адреса г. Санкт-Петербург, нул. Большая Конюшенная, д. 19/8, по которому находится компания"></iframe>
-        <img src="" alt="Указатель компании" class="map__marker">
+        <div class="info__map">
+          <h3 class="visually-hidden">Расположение компании</h3>
+          <iframe class="info__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.326557332854!2d30.314830298559226!3d59.93908396681588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1626901145311!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" title="Карта с изображением адреса г. Санкт-Петербург, нул. Большая Конюшенная, д. 19/8, по которому находится компания"></iframe>
+        </div>
       </section>
     </main>
     <footer class="footer">
