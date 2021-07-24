@@ -35,7 +35,109 @@
       </div>
     </header>
     <main>
-
+      <h1 class="visually-hidden">Форма для подбора программы питания</h1>
+      <section class="form">
+        <div class="form__wrapper">
+          <h2 class="form__title">Подбор программы</h2>
+          <p class="form__lead">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+          <form class="questionnaire" action="https://echo.htmlacademy.ru" method="POST">
+            <fieldset class="questionnaire__data data-field">
+              <legend class="visually-hidden">Данные кота</legend>
+              <ul class="data-field__list">
+                <li class="data-field__item">
+                  <label class="data-field__label" for="cat-name">Имя:*</label>
+                  <input class="data-field__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+                </li>
+                <li class="data-field__item">
+                  <label class="data-field__label" for="cat-weight">Вес (кг):*</label>
+                  <input class="data-field__input" id="cat-weight" type="number" name="cat-weight" placeholder="7" required>
+                </li>
+                <li class="data-field__item">
+                  <label class="data-field__label" for="cat-age">Возраст (лет):</label>
+                  <input class="data-field__input" id="cat-age" type="number" name="cat-age" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__program program-field">
+              <legend class="visually-hidden">Выбор программы</legend>
+              <ul class="program-field__list">
+                <li class="program-field__item">
+                  <input class="program-field__input" id="slimming" type="radio" name="program" value="slimming" checked>
+                  <label class="program-field__label" for="slimming">Похудение</label>
+                </li>
+                <li class="program-field__item">
+                  <input class="program-field__input" id="gain" type="radio" name="program" value="gain">
+                  <label class="program-field__label" for="gain">Набор массы</label>
+                </li>
+                <li class="program-field__item">
+                  <input class="program-field__input" id="advice" type="radio" name="program" value="advice">
+                  <label class="program-field__label" for="advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__contacts contacts-field">
+              <legend class="questionnaire__legend">Контактные данные (владельца кота)</legend>
+              <ul class="contacts-field__list">
+                <li class="contacts-field__item">
+                  <label class="contacts-field__label" for="email">E-mail:*</label>
+                  <input class="contacts-field__input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                </li>
+                <li class="contacts-field__item">
+                  <label class="contacts-field__label" for="phone">Телефон:*</label>
+                  <input class="contacts-field__input" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="questionnaire__comment">
+              <legend class="questionnaire__legend">Комментарий</legend>
+              <p class="questionnaire__comment-wrapper">
+                <textarea class="questionnaire__comment-textarea" id="comment" name="comment"></textarea>
+                <label class="questionnaire__comment-label" for="comment">Расскажите обо всех повадках кота</label>   <!--Тут я осознанно в лэйбл поместил, если это ошибка-исправлю-->
+              </p>
+            </fieldset>
+            <fieldset class="questionnaire__addition addition-field">
+              <legend class="questionnaire__legend">Дополнительно</legend>
+              <ul class="addition-field__list">
+                <li class="addition-field__item">
+                  <input class="addition-field__input" id="sugar" type="checkbox" name="sugar" checked>
+                  <label class="addition-field__label" for="sugar">Сахарозаменитель</label>
+                </li>
+                <li class="addition-field__item">
+                  <input class="addition-field__input" id="water" type="checkbox" name="water">
+                  <label class="addition-field__label" for="water">Питьевая вода</label>
+                </li>
+                <li class="addition-field__item">
+                  <input class="addition-field__input" id="milk" type="checkbox" name="milk">
+                  <label class="addition-field__label" for="milk">Молоко</label>
+                </li>
+                <li class="addition-field__item">
+                  <input class="addition-field__input" id="vitamins" type="checkbox" name="vitamins">
+                  <label class="addition-field__label" for="vitamins">Витамины</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="questionnaire__button button button--green" type="submit">Отправить заявку</button>
+            <strong>* — Обязательные поля</strong>
+          </form>
+        </div>
+      </section>
+      <section class="partnership">
+        <div class="partnership__wrapper">
+          <div class="partnership__info">
+            <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <address class="partnership__address">
+              ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+            </address>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Расположение компании</h2>
+        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.326557332854!2d30.314830298559226!3d59.93908396681588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1626901145311!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" title="Карта с изображением адреса г. Санкт-Петербург, нул. Большая Конюшенная, д. 19/8, по которому находится компания"></iframe>
+        <img src="" alt="Указатель компании" class="map__marker">
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
