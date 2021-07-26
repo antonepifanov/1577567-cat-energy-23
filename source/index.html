@@ -22,14 +22,14 @@
               <a class="menu__link menu__link--active">Главная</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Каталог продукции</a>
+              <a class="menu__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Подбор программы</a>
+              <a class="menu__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
           <div class="menu__control">
-            <button class="menu__button menu__button--hidden" aria-label="Кнопка открытия/закрытия меню"></button>
+            <button class="menu__button menu__button--hidden" aria-label="Открыть меню"></button>
           </div>
         </nav>
       </div>
@@ -38,38 +38,38 @@
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов</h1>
       <section class="intro">
         <div class="intro__wrapper">
-          <h2 class="intro__title">Функциональное питание для котов</h2>
+          <h2 class="intro__title title">Функциональное питание для котов</h2>
           <strong class="intro__slogan">Занялся собой? Займись котом!</strong>
           <div class="intro__image">
             <img src="" alt="Изображение продукта Cat Energy">
           </div>
-          <a href="form.html" class="intro__link button button--green">Подобрать программу</a>
+          <a class="intro__link button button--green" href="form.html">Подобрать программу</a>
         </div>
       </section>
       <section class="programs">
         <h2 class="visually-hidden">Список программ питания</h2>
         <div class="programs__wrapper">
           <ul class="programs__list">
-            <li class="programs__item program">
-              <h3 class="program__title program__title--slim">Похудение</h3>
+            <li class="programs__item program program--slim">
+              <h3 class="program__title title">Похудение</h3>
               <p class="program__lead">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
-              <a href="slim.html" class="program__link">Каталог slim</a>
+              <a class="program__link" href="slim.html">Каталог slim</a>
             </li>
-            <li class="programs__item program">
-              <h3 class="program__title program__title--pro">Набор массы</h3>
+            <li class="programs__item program program--pro">
+              <h3 class="program__title title">Набор массы</h3>
               <p class="program__lead">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a href="pro.html" class="program__link">Каталог pro</a>
+              <a class="program__link" href="pro.html">Каталог pro</a>
             </li>
           </ul>
         </div>
       </section>
       <section class="advantages">
         <div class="advantages__wrapper">
-          <h2 class="advantages__title">Как это работает</h2>
+          <h2 class="advantages__title title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
               <p class="advantage__item-eco">
@@ -96,7 +96,7 @@
       </section>
       <section class="example">
         <div class="example__wrapper">
-          <h2 class="example__title">Живой пример</h2>
+          <h2 class="example__title title">Живой пример</h2>
           <p class="example__lead">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
@@ -117,62 +117,60 @@
           <div class="example__slider compare-slider">
             <ul class="compare-slider__list">
               <li class="compare-slider__item compare-slider__item--active">
-                <img src="" alt="Изображение толстого кота" class="compare-slider__pic">
+                <img class="compare-slider__pic" src="" alt="Изображение толстого кота">
               </li>
               <li class="compare-slider__item">
-                <img src="" alt="Изображение худого кота" class="compare-slider__pic">
+                <img class="compare-slider__pic" src="" alt="Изображение худого кота">
               </li>
             </ul>
             <div class="compare-slider__control control">
-              <button class="control__button control__button--before" aria-label="Состояние кота до Cat Energy"></button>
+              <button class="control__button control__button--before" aria-label="Состояние кота до Cat Energy">Было</button>
               <div class="control__range">
                 <button class="control__range-button" aria-label="Ползунок для сравнения котов"></button>
               </div>
-              <button class="control__button control__button--after" aria-label="Состояние кота после Cat Energy"></button>
+              <button class="control__button control__button--after" aria-label="Состояние кота после Cat Energy">Стало</button>
             </div>
           </div>
         </div>
       </section>
-      <section class="partnership">
-        <div class="partnership__wrapper">
-          <div class="partnership__info">
-            <h2 class="partnership__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <address class="partnership__address">
-              ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
-            </address>
-          </div>
+      <section class="info">
+        <h2 class="visually-hidden">Информация о компании</h2>
+        <div class="info__wrapper">
+          <h3 class="info__title title">Приглашаем к сотрудничеству дилеров!</h3>
+          <address class="info__address">
+            ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+          </address>
         </div>
-      </section>
-      <section class="map">
-        <h2 class="visually-hidden">Расположение компании</h2>
-        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.326557332854!2d30.314830298559226!3d59.93908396681588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1626901145311!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" title="Карта с изображением адреса г. Санкт-Петербург, нул. Большая Конюшенная, д. 19/8, по которому находится компания"></iframe>
-        <img src="" alt="Указатель компании" class="map__marker">
+        <div class="info__map">
+          <h3 class="visually-hidden">Расположение компании</h3>
+          <iframe class="info__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.326557332854!2d30.314830298559226!3d59.93908396681588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f73f25307%3A0x5f324ecfe13f2efa!2z0JDQu9GM0YTQsC3QsdCw0L3Qug!5e0!3m2!1sru!2sru!4v1626901145311!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy" title="Карта с изображением адреса г. Санкт-Петербург, нул. Большая Конюшенная, д. 19/8, по которому находится компания"></iframe>
+        </div>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <img src="" alt="Логотип Cat Energy" class="footer__logo">
+        <a class="footer__logo">
+          <img src="" alt="Логотип Cat Energy">
+        </a>
         <ul class="footer__socials social">
           <li class="social__item">
-            <a href="http://vk.com/cat_energy_ru" class="social__link" rel="noopener" target="_blank" aria-label="В контакте"></a>
+            <a class="social__link" href="http://vk.com/cat_energy_ru" rel="noopener" target="_blank" aria-label="В контакте"></a>
           </li>
           <li class="social__item">
-            <a href="http://instagram.com/cat_energy_ru" class="social__link" rel="noopener" target="_blank" aria-label="Инстаграм"></a>
+            <a class="social__link" href="http://instagram.com/cat_energy_ru" rel="noopener" target="_blank" aria-label="Инстаграм"></a>
           </li>
           <li class="social__item">
-            <a href="http://facebook.com/cat_energy_ru" class="social__link" rel="noopener" target="_blank" aria-label="Фэйсбук"></a>
+            <a class="social__link" href="http://facebook.com/cat_energy_ru" rel="noopener" target="_blank" aria-label="Фэйсбук"></a>
           </li>
         </ul>
-        <div class="footer__links academy-links">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="academy-links__text" rel="noopener" target="_blank">HTML Academy</a>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="academy-links__logo" rel="noopener" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34">
-              <g>
-                <path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
-              </g>
-            </svg>
-          </a>
-        </div>
+        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener" target="_blank">
+          <span class="footer__link-text">HTML Academy</span>
+          <svg class="footer__link-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34">
+            <g>
+              <path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+            </g>
+          </svg>
+        </a>
       </div>
     </footer>
   </body>
