@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -29,9 +30,7 @@
               <a class="menu__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
-          <div class="menu__control">
-            <button class="menu__button menu__button--hidden" aria-label="Открыть меню"></button>
-          </div>
+          <button class="menu__button menu__button--hidden" aria-label="Открыть меню"></button>
         </nav>
       </div>
     </header>
@@ -42,7 +41,7 @@
           <h2 class="intro__title title">Функциональное питание для котов</h2>
           <strong class="intro__slogan">Занялся собой? Займись котом!</strong>
           <div class="intro__image">
-            <img src="" alt="Изображение продукта Cat Energy">
+            <img src="" width="280" height="270" alt="Изображение продукта Cat Energy">
           </div>
           <a class="intro__link button button--green" href="form.html">Подобрать программу</a>
         </div>
@@ -115,31 +114,32 @@
               <dd>15 000 руб.</dd>
             </div>
           </dl>
-          <div class="example__slider compare-slider">
-            <ul class="compare-slider__list">
-              <li class="compare-slider__item compare-slider__item--active">
-                <img class="compare-slider__image" src="" alt="Изображение толстого кота">
-              </li>
-              <li class="compare-slider__item">
-                <img class="compare-slider__image" src="" alt="Изображение худого кота">
-              </li>
-            </ul>
-            <div class="compare-slider__control control">
-              <button class="control__button" aria-label="Состояние кота до Cat Energy">Было</button>
-              <div class="control__range">
-                <button class="control__range-button" aria-label="Ползунок для сравнения котов"></button>
-              </div>
-              <button class="control__button" aria-label="Состояние кота после Cat Energy">Стало</button>
+        </div>
+        <div class="example__slider compare-slider">
+          <ul class="compare-slider__list">
+            <li class="compare-slider__item compare-slider__item--active">
+              <img class="compare-slider__image" src="" alt="Изображение толстого кота">
+            </li>
+            <li class="compare-slider__item">
+              <img class="compare-slider__image" src="" alt="Изображение худого кота">
+            </li>
+          </ul>
+          <div class="compare-slider__control control">
+            <button class="control__button" aria-label="Состояние кота до Cat Energy">Было</button>
+            <div class="control__range">
+              <button class="control__range-button" aria-label="Ползунок для сравнения котов"></button>
             </div>
+            <button class="control__button" aria-label="Состояние кота после Cat Energy">Стало</button>
           </div>
         </div>
       </section>
       <section class="info">
         <h2 class="visually-hidden">Информация о компании</h2>
         <div class="info__wrapper">
-          <h3 class="info__title title">Приглашаем к сотрудничеству дилеров!</h3>
+          <h3 class="info__title title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
           <address class="info__address">
-            ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+            ул. Большая Конюшенная, д. 19/8
+            <span>Санкт-Петербург</span>
           </address>
         </div>
         <div class="info__map">
