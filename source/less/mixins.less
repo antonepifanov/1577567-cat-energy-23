@@ -40,3 +40,15 @@
   margin: 0;
   font-family: @arial;
 }
+
+.tablet(@rules) {
+  @media (min-width: @tablet) {
+    @rules();
+  }
+}
+
+.desctop(@rules) {
+  @media (min-width: @desktop) {
+    @rules();
+  }
+}
