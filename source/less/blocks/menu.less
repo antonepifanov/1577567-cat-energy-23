@@ -1,0 +1,30 @@
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  .list-style();
+}
+
+.menu__item {
+  width: calc(100% + @padding--mobile*2);
+  margin-left: -@padding--mobile;
+  margin-right: -@padding--mobile;
+  border-top: 1px solid @menu-border;
+
+  &:last-child {
+    border-bottom: 1px solid @menu-border;
+  }
+}
+
+.menu__link {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: @black;
+  padding: 23px 0;
+}
+
+.menu__button--hidden {
+  display: none;
+}
