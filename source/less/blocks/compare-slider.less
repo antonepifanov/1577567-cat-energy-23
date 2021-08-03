@@ -12,19 +12,29 @@
   });
 }
 
-.compare-slider__list {
-  .list-style();
-  margin-bottom: 23px;
+.compare-slider__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
 
   .desktop({
     width: 50%;
   });
 }
 
+.compare-slider__list {
+  .list-style();
+}
+
 .compare-slider__item {
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .compare-slider__item--active {
+  display: flex;
 }
 
 .compare-slider__image {
