@@ -22,6 +22,33 @@
   &::after {
     background-color: @intro-bg;
   }
+
+  .tablet({
+    padding: 0;
+    min-height: 810px;
+
+    &::before,
+    &::after {
+      width: 0;
+    }
+  });
+
+  .desktop({
+    min-height: 694px;
+    margin-top: -112px;
+
+    &::before,
+    &::after {
+      width: 50%;
+      height: 100%;
+      left: 50%;
+      top: 0;
+    }
+
+    &::before {
+      background-image: url("../img/index-background-desktop.jpg");
+    }
+  });
 }
 
 .intro__wrapper {
@@ -31,6 +58,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  .tablet({
+    align-items: flex-start;
+    padding-left: calc(@padding--tablet + 90px);
+  });
+
+  .desktop({
+    padding-left: calc(@padding--desktop + 80px);
+    padding-top: 223px;
+  });
 }
 
 .intro__title {
@@ -38,6 +75,13 @@
   line-height: 1;
   text-align: center;
   color: @white;
+
+  .tablet({
+    color: @black;
+    font-size: 60px;
+    max-width: 414px;
+    text-align: left;
+  });
 }
 
 .intro__slogan {
@@ -48,12 +92,36 @@
   margin-bottom: 29px;
   text-transform: uppercase;
   color: @white;
+
+  .tablet({
+    color: @black;
+    font-size: 20px;
+    margin-top: 41px;
+    margin-bottom: 49px;
+  });
+
+  .desktop ({
+    margin-top: 40px;
+    margin-bottom: 52px;
+  });
 }
 
 .intro__image {
   margin-bottom: 3px;
+  .tablet({
+    position: absolute;
+    top: 201px;
+    left: calc(50% - 140px);
+  });
 }
 
 .intro__link {
-  width: 100%;
+  align-self: stretch;
+  font-size: 14px;
+
+  .tablet({
+    align-self: start;
+    min-width: 244px;
+    font-size: 20px;
+  });
 }

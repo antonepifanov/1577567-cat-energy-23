@@ -1,5 +1,9 @@
 .info {
-  background-color: @grey-bg;
+  background-color: @white;
+
+  .desktop({
+    position: relative;
+  });
 }
 
 .info__wrapper {
@@ -8,7 +12,21 @@
   padding-bottom: 27px;
   display: flex;
   justify-content: center;
-  align-items: center;
+
+  .tablet({
+    padding-top: 62px;
+    padding-bottom: 58px;
+    padding-left: calc(@padding--tablet + 41px);
+    padding-right: calc(@padding--tablet + 41px);
+  });
+
+  .desktop({
+    position: absolute;
+    background-color: @white;
+    width: 570px;
+    top: 95px;
+    left: @padding--desktop;
+  });
 }
 
 .info__title {
@@ -17,6 +35,11 @@
   line-height: 1.25;
   color: @other-card;
   max-width: 170px;
+
+  .tablet({
+    font-size: 20px;
+    line-height: 1.1;
+  });
 }
 
 .info__address {
@@ -29,10 +52,25 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .tablet({
+    font-size: 16px;
+    line-height: 1;
+    max-width: 160px;
+    text-align: right;
+  });
+
+  .desktop({
+    text-align: left;
+  });
 }
 
 .info__map {
   height: 362px;
+
+  .tablet({
+    height: 400px;
+  });
 }
 
 .info__map-frame {

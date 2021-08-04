@@ -1,5 +1,7 @@
 .programs {
-  margin-bottom: 27px;
+  .desktop({
+    padding-top: 82px;
+  });
 }
 
 .programs__wrapper {
@@ -8,8 +10,21 @@
 
 .programs__list {
   .list-style();
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .tablet({
+    gap: 30px;
+  });
+
+  .desktop({
+    flex-direction: row;
+    gap: 80px;
+  });
 }
 
 .programs__item {
-  margin-bottom: 20px;
+  .desktop({
+  });
 }

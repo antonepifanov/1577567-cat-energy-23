@@ -1,9 +1,18 @@
 .logo {
   display: flex;
-  padding-top: 10px;
+  align-items: center;
   padding-bottom: 17px;
+
+  .tablet({
+    padding: 0;
+  });
 }
 
 .logo__icon {
   margin-right: 57px;
+  flex-shrink: 0;
+
+  .tablet({
+    margin-right: 12px;
+  });
 }
