@@ -24,13 +24,11 @@
     background-color: @green;
 
     .tablet({
-      top: 60px;
-      left: 446px;
-      width: 200px;
-      height: 200px;
+      display: none;
     });
 
     .desktop({
+      display: block;
       top: 47px;
       left: 52px;
       width: 100px;
@@ -38,7 +36,27 @@
     });
   }
 
-  &:last-child::before {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 47px;
+    right: 62px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: @green;
+    display: none;
+
+    .tablet({
+      display: block;
+    });
+
+    .desktop({
+      display: none;
+    });
+  }
+
+  &:last-child::after {
     .tablet ({
       top: 91px;
     });
