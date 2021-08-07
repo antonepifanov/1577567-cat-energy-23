@@ -1,19 +1,45 @@
 .form {
 }
 
+.form__section {
+  margin-bottom: 26px;
+
+  .tablet({
+    margin-bottom: 65px;
+  });
+
+  .desktop({
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  });
+}
+
 .form__data {
   border: none;
   .list-style();
+  margin-bottom: 24px;
+
+  .tablet({
+    margin-bottom: 72px;
+  });
+
+  .desktop({
+    margin-bottom: 0;
+  });
 }
 
 .form__data-list {
   .list-style();
-  margin-bottom: 24px;
 }
 
 .form__data-item {
   &:not(:last-child) {
     margin-bottom: 11px;
+
+    .tablet({
+      margin-bottom: 20px;
+    });
   }
 }
 
@@ -25,21 +51,34 @@
   margin-right: -@padding--mobile;
   border-top: 1px solid @footer-border;
   border-bottom: 1px solid @footer-border;
-  margin-bottom: 26px;
+
+  .tablet({
+    width: 100%;
+    margin: 0;
+    border: 1px solid @footer-border;
+  });
 }
 
 .form__program-list {
   .list-style();
   padding: 20px @padding--mobile;
+
+  .tablet({
+    padding: 25px 28px;
+  });
 }
 
 .form__program-item {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 13px;
+
+  .tablet({
+    gap: 20px;
+  });
 
   &:not(:last-child) {
-    padding-bottom: 13px;
+    margin-bottom: 13px;
   }
 }
 
@@ -51,12 +90,24 @@
   line-height: 1.13;
   color: @card-title;
   text-transform: uppercase;
+
+  .tablet({
+    font-size: 20px;
+  });
 }
 
 .form__contacts {
   .list-style();
   border: none;
   margin-bottom: 23px;
+
+  .tablet({
+    margin-bottom: 65px;
+  });
+
+  .desktop({
+    margin-bottom: 69px;
+  });
 }
 
 .form__contacts-legend {
@@ -64,15 +115,34 @@
   line-height: 1;
   margin-bottom: 35px;
   color: @black;
+
+  .tablet({
+    font-size: 36px;
+    margin-bottom: 76px;
+  });
 }
 
 .form__contacts-list {
   .list-style();
+
+  .desktop({
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+  });
 }
 
 .form__contacts-item {
   &:not(:last-child) {
     margin-bottom: 14px;
+
+    .tablet({
+      margin-bottom: 20px;
+    });
+
+    .desktop({
+      margin-bottom: 0;
+    });
   }
 
   label {
@@ -84,8 +154,14 @@
   .list-style();
   border: none;
   margin-bottom: 23px;
-  font-size: 16px;
-  line-height: 1.13;
+
+  .tablet({
+    margin-bottom: 65px;
+  });
+
+  .desktop({
+    margin-bottom: 67px;
+  });
 }
 
 .form__comment-legend {
@@ -93,11 +169,17 @@
   line-height: 1;
   margin-bottom: 37px;
   color: @black;
+
+  .tablet({
+    margin-bottom: 76px;
+    font-size: 36px;
+  });
 }
 
 .form__comment-wrapper {
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 .form__comment-textarea {
@@ -105,19 +187,47 @@
   min-height: 150px;
   outline: none;
   border: 1px solid @input-border;
-  border-radius: 2px;
   resize: none;
   padding: 9px 15px;
+
+  .tablet({
+    padding: 10px 19px;
+    min-height: 174px;
+  });
+
+  &:focus + label {
+    display: none;
+  }
 }
 
 .form__comment-label {
+  position: absolute;
+  top: 9px;
+  left: 15px;
   text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.13;
+
+  .tablet({
+    top: 10px;
+    left: 19px;
+    font-size: 20px;
+    line-height: 1.5;
+  });
 }
 
 .form__addition {
   .list-style();
   border: none;
   margin-bottom: 34px;
+
+  .tablet({
+    margin-bottom: 54px;
+  });
+
+  .desktop ({
+    margin-bottom: 61px;
+  });
 }
 
 .form__addition-legend {
@@ -125,10 +235,28 @@
   line-height: 1;
   margin-bottom: 34px;
   color: @black;
+
+  .tablet({
+    margin-bottom: 57px;
+    font-size: 36px;
+  });
 }
 
 .form__addition-list {
   .list-style();
+
+  .tablet({
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 123px;
+    row-gap: 32px;
+  });
+
+  .desktop({
+    display: flex;
+    gap: 104px;
+  });
 }
 
 .form__addition-item {
@@ -139,8 +267,21 @@
   line-height: 1.12;
   text-transform: uppercase;
 
+  .tablet({
+    gap: 19px;
+    font-size: 20px;
+  });
+
+  .desktop({
+    min-width: 221px;
+  });
+
   &:not(:last-child) {
     margin-bottom: 13px;
+
+    .tablet({
+      margin-bottom: 0;
+    });
   }
 }
 
@@ -153,6 +294,18 @@
 .form__button {
   min-width: 100%;
   margin-bottom: 21px;
+
+  .tablet({
+    min-width: 282px;
+    margin-bottom: 0;
+    margin-right: 61px;
+    font-size: 20px;
+  });
+
+  .desktop({
+    min-width: 568px;
+    margin-right: 81px;
+  });
 }
 
 .form__note {
@@ -162,5 +315,9 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
-  margin-bottom: 32px;
+
+  .tablet({
+    display: inline-flex;
+    align-items: center;
+  });
 }

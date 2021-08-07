@@ -13,6 +13,24 @@
   flex-shrink: 0;
 
   .tablet({
-    margin-right: 12px;
+    margin-right: 0;
+  });
+
+  img {
+    .tablet({
+      width: 174px;
+      height: 51px;
+    });
+
+    .desktop({
+      width: 202px;
+      height: 59px;
+    });
+  }
+}
+
+.logo__text {
+  .tablet({
+    display: none;
   });
 }

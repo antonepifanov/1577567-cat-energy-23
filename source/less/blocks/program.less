@@ -12,6 +12,37 @@
     flex-grow: 1;
     flex-basis: 570px;
   });
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @green;
+
+    .tablet({
+      top: 60px;
+      left: 446px;
+      width: 200px;
+      height: 200px;
+    });
+
+    .desktop({
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    });
+  }
+
+  &:last-child::before {
+    .tablet ({
+      top: 91px;
+    });
+  }
 }
 
 .program__title {
@@ -30,6 +61,7 @@
 
   .desktop ({
     margin-left: 162px;
+    margin-bottom: 73px;
   });
 }
 
@@ -53,6 +85,7 @@
   .desktop ({
     width: auto;
     max-width: 100%;
+    margin-bottom: 23px;
   });
 }
 

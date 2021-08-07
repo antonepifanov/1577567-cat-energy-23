@@ -1,11 +1,14 @@
 .input-field {
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.13;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 12px;
+
+  .tablet({
+    font-size: 20px;
+  });
 }
 
 .input-field__label {
@@ -17,12 +20,20 @@
   border: 1px solid @input-border;
   flex-grow: 1;
 
+  .tablet({
+    min-height: 52px;
+    padding: 10px 19px;
+  });
+
   &::placeholder {
     font-size: 16px;
-    font-weight: 400;
     line-height: 1.13;
     color: @text;
     text-transform: uppercase;
+
+    .tablet({
+      font-size: 20px;
+    });
   }
 
   &:focus::placeholder {

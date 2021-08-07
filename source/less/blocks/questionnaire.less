@@ -1,5 +1,15 @@
 .questionnaire {
   border-top: 1px solid @footer-border;
+  padding-bottom: 32px;
+
+  .tablet({
+    border-top: none;
+    padding-bottom: 72px;
+  });
+
+  .desktop({
+    padding-bottom: 82px;
+  });
 }
 
 .questionnaire__wrapper {
@@ -8,10 +18,21 @@
 
 .questionnaire__title {
   padding-top: 27px;
-  padding-bottom: 35px;
+  margin-bottom: 37px;
   font-size: 36px;
   line-height: 1;
   color: @black;
+
+  .tablet({
+    padding-top: 3px;
+    margin-bottom: 54px;
+    font-size: 60px;
+  });
+
+  .desktop({
+    padding-top: 73px;
+    margin-bottom: 56px;
+  });
 }
 
 .questionnaire__lead {
@@ -23,6 +44,13 @@
   text-transform: uppercase;
   max-width: 226px;
   margin-bottom: 29px;
+
+  .tablet({
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 323px;
+  });
 }
 
 .questionnaire__form {

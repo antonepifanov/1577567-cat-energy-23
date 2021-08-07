@@ -108,11 +108,32 @@
 
 .intro__image {
   margin-bottom: 3px;
+
   .tablet({
+    margin-bottom: 0;
     position: absolute;
     top: 201px;
-    left: calc(50% - 140px);
+    left: calc(50% - 354px);
+    z-index: -1;
   });
+
+  .desktop({
+    top: 141px;
+    left: 558px;;
+  });
+
+  img {
+    .tablet({
+      width: 709px;
+      height: 609px;
+    });
+
+    .desktop({
+      width: 552px;
+      height: 499px;
+    });
+  }
+
 }
 
 .intro__link {
