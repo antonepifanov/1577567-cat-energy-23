@@ -1,4 +1,5 @@
 .program {
+  position: relative;
   background-color: @grey-bg;
   padding: 30px 20px 18px 20px;
   display: flex;
@@ -24,11 +25,15 @@
     background-color: @green;
 
     .tablet({
-      display: none;
+      left: unset;
+      top: 60px;
+      right: 62px;
+      width: 200px;
+      height: 200px;
     });
 
     .desktop({
-      display: block;
+      right: unset;
       top: 47px;
       left: 52px;
       width: 100px;
@@ -36,29 +41,13 @@
     });
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 60px;
-    right: 62px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: @green;
-    display: none;
-
-    .tablet({
-      display: block;
+  &:last-child::before {
+    .tablet ({
+      top: 91px;
     });
 
     .desktop({
-      display: none;
-    });
-  }
-
-  &:last-child::after {
-    .tablet ({
-      top: 91px;
+      top: 47px;
     });
   }
 }
