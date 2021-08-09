@@ -8,6 +8,24 @@
   padding-bottom: 19px;
   display: flex;
   flex-direction: column;
+
+  .tablet({
+    border-left: 1px solid @range-border;
+    border-right: 1px solid @range-border;
+    padding: 27px 38px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+  });
+
+  .desktop({
+    border-left: none;
+    border-right: none;
+    padding: 16px 0;
+    gap: unset;
+    justify-content: space-between;
+  });
 }
 
 .additional-card__title {
@@ -15,6 +33,12 @@
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 13px;
+
+  .tablet({
+    font-size: 20px;
+    margin-right: auto;
+    margin-bottom: 0;
+  });
 }
 
 .additional-card__description {
@@ -25,13 +49,38 @@
   font-size: 14px;
   line-height: 1;
   margin-bottom: 15px;
+
+  .tablet({
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 0;
+  });
+
+  .desktop({
+    margin-right: 38px;
+    justify-content: space-between;
+    width: 33%;
+  });
 }
 
 .additional-card__termin {
+  .tablet({
+    margin-right: 49px;
+  });
+
+  .desktop({
+    margin-right: 0;
+  });
 }
 
 .additional-card__definition {
+  margin-left: 0;
 }
 
 .additional-card__button {
+  min-width: 100%;
+
+  .desktop({
+    min-width: 244px;
+  });
 }

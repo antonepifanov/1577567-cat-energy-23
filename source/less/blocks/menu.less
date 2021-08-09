@@ -82,13 +82,15 @@
   position: relative;
 
   &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    bottom: -10px;
-    left: 0;
-    background-color: @green;
+    .tablet({
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      bottom: -10px;
+      left: 0;
+      background-color: @green;
+    });
 
     .desktop({
       background-color: @white;

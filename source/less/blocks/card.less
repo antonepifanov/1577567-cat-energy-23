@@ -1,15 +1,11 @@
 .card {
-  min-height: 209px;
-  border-top: 1px solid @grey-hover;
-
-  &:last-of-type {
-    border-bottom: 1px solid @grey-hover;
-  }
-
   .tablet({
-    border-bottom: none;
     border-top: none;
     background-color: @grey-bg;
+  });
+
+  .desktop ({
+    max-width: 245px;
   });
 }
 
@@ -19,6 +15,18 @@
   display: grid;
   grid-template-columns: 50% 27% 23%;
   grid-template-rows: repeat(3, auto);
+
+  .tablet({
+    padding: 38px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  });
+
+  .desktop({
+    padding-bottom: 40px;
+  });
 }
 
 .card__title {
@@ -28,9 +36,18 @@
   line-height: 1.25;
   text-transform: uppercase;
   margin-bottom: 18px;
+
+  .tablet({
+    font-size: 20px;
+    max-width: 145px;
+    text-align: center;
+    margin-bottom: 21px;
+  });
 }
 
 .card__image {
+  width: 140px;
+  height: 112px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,10 +55,25 @@
   grid-column: ~ "1/2";
   grid-row: ~ "1/3";
 
-  & img {
+  .tablet({
+    width: 168px;
+    height: 200px;
+    position: relative;
+    top: -74px;
+    margin-bottom: -74px;
+  });
+
+  .desktop ({
+    width: 172px;
+    height: 196px;
+    top: -80px;
+    margin-bottom: -80px;
+  });
+
+  img {
     .tablet({
       width: 168px;
-    height: 200px;
+      height: 200px;
     });
 
     .desktop ({
@@ -59,6 +91,13 @@
   line-height: 1.33;
   display: flex;
   flex-direction: column;
+
+  .tablet({
+    align-self: stretch;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 33px;
+  });
 }
 
 .card__description-item {
@@ -68,6 +107,15 @@
   &:not(:last-of-type) {
     margin-bottom: 2px;
   }
+
+  .tablet({
+    padding-bottom: 9px;
+    border-bottom: 1px solid @range-border;
+
+    &:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  });
 }
 
 .card__description-termin {
@@ -80,5 +128,10 @@
 .card__button {
   grid-column: ~ "1/-1";
   grid-row: ~ "3/4";
-  margin-top: 17px;
+  margin-top: 13px;
+
+  .tablet({
+    align-self: stretch;
+    margin-top: 0;
+  });
 }
