@@ -1,15 +1,5 @@
 .compare-slider {
-  .tablet({
-    background-color: @grey-bg-ex;
-    padding-bottom: 64px;
-  });
 
-  .desktop({
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: @padding--desktop;
-  });
 }
 
 .compare-slider__wrapper {
@@ -19,7 +9,7 @@
   gap: 23px;
 
   .desktop({
-    width: 50%;
+    gap: 17px;
   });
 }
 
@@ -31,6 +21,16 @@
   display: none;
   align-items: center;
   justify-content: center;
+
+  .tablet({
+    width: 708px;
+    height: 535px;
+  });
+
+  .desktop({
+    width: 690px;
+    height: 540px;
+  });
 }
 
 .compare-slider__item--active {
@@ -38,6 +38,15 @@
 }
 
 .compare-slider__image {
+  .tablet({
+    width: 708px;
+    height: 535px;
+  });
+
+  .desktop({
+    width: 690px;
+    height: 540px;
+  });
 }
 
 .compare-slider__control {
