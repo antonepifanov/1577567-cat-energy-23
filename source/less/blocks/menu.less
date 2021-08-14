@@ -60,9 +60,16 @@
   text-transform: uppercase;
   color: @black;
   padding: 23px 0;
+  transition: @transition;
 
-  &:active:not(.menu__link--active) {
-    color: fade(@black, 30%);
+  &[href]:hover {
+    .tablet({
+      opacity: 0.6;
+    });
+  }
+
+  &[href]:active {
+    opacity: 0.3;
   }
 
   .tablet({

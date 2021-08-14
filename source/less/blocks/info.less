@@ -71,11 +71,24 @@
 }
 
 .info__map {
+  position: relative;
   height: 362px;
 
   .tablet({
     height: 400px;
   });
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 57px;
+    height: 53px;
+    top: calc(50% - 40px);
+    left: calc(50% - 28.5px);
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .info__map-frame {

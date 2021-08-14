@@ -6,12 +6,13 @@
   flex-direction: column;
 
   .tablet({
-    padding: 77px 30px 53px 52px;
+    padding: 77px 30px 57px 52px;
   });
 
   .desktop ({
     flex-grow: 1;
     flex-basis: 570px;
+    padding-bottom: 59px;
   });
 
   &::before {
@@ -62,6 +63,7 @@
 
   .tablet({
     font-size: 36px;
+    line-height: 1;
     margin-bottom: 24px;
     margin-left: 0;
   });
@@ -84,7 +86,7 @@
   .tablet({
     font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 48px;
+    margin-bottom: 52px;
     padding-bottom: 0;
     border: none;
     max-width: 55%;
@@ -93,17 +95,110 @@
   .desktop ({
     width: auto;
     max-width: 100%;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   });
 }
 
 .program__link {
+  position: relative;
   text-transform: uppercase;
   color: @black;
   font-size: 16px;
   line-height: 1;
+  align-self: flex-start;
 
   .tablet({
     font-size: 20px;
+    line-height: 1.5;
   });
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 30px;
+    top: calc(50% - 15px);
+    right: -39px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 9px;
+    transition: @transition;
+
+    .tablet({
+      right: -49px;
+    });
+  }
+
+  &:hover::after {
+    transform: scaleX(1.4);
+    right: -44px;
+
+    .tablet({
+      right: -54px;
+    });
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.program--slim {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: 29px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/cat-slim.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .tablet({
+      width: 140px;
+      height: 194px;
+      top: 49px;
+      right: 92px;
+      left: unset;
+    });
+
+    .desktop({
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      right: unset;
+      left: 67px;
+    });
+  }
+}
+
+.program--pro {
+  &::after {
+    position: absolute;
+    content: "";
+    top: 35px;
+    left: 13px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/cat-pro.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .tablet({
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      right: 28px;
+      left: unset;
+    });
+
+    .desktop({
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      right: unset;
+      left: 33px;
+    });
+  }
 }

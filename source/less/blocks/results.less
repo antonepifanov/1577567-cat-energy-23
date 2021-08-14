@@ -40,12 +40,31 @@
 }
 
 .results__item--accent {
+  position: relative;
   flex-direction: column;
   width: 124px;
 
   .tablet({
     width: 162px;
   });
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -14px;
+    left: 0;
+    width: 124px;
+    height: 56px;
+    background-image: url("../img/back.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .tablet({
+      width: 161px;
+      height: 73px;
+      top: -17px;
+    });
+  }
 
   dt {
     font-family: @arial;
@@ -60,7 +79,15 @@
       font-size: 14px;
       line-height: 1;
       width: auto;
+      padding-left: 7px;
+      padding-right: 7px;
+      background-color: @white;
+      z-index: 10;
     });
+
+    .desktop({
+      background-color: @grey-bg;
+    })
   }
 
   dd {

@@ -28,6 +28,15 @@
   border-bottom: 1px solid @footer-border;
   display: flex;
   justify-content: center;
+  transition: @transition;
+
+  &:hover[href] {
+    opacity: 0.8;
+  }
+
+  &:active[href] {
+    opacity: 0.6;
+  }
 
   .tablet({
     padding-bottom: 0;
