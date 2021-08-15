@@ -1,14 +1,15 @@
 .social {
   .list-style();
   padding: 20px 0;
-  max-width: 130px;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 36px;
+  gap: 35px;
 
   .tablet({
     padding: 0;
+    gap: 28px;
   });
 }
 
@@ -16,4 +17,46 @@
 }
 
 .social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__icon--vk {
+  .tablet({
+    width: 29px;
+    height: 17px;
+  });
+}
+
+
+.social__icon--insta {
+  .tablet({
+    width: 23px;
+    height: 23px;
+  });
+}
+
+.social__icon--fb {
+  .tablet({
+    width: 13px;
+    height: 27px;
+  });
+}
+
+.social__link:hover .social__icon--vk,
+.social__link:hover .social__icon--insta {
+  path {
+    fill: @green;
+  }
+}
+
+.social__link:hover .social__icon--fb {
+  path {
+    stroke: @green;
+  }
+}
+
+.social__link:active {
+  opacity: 0.3;
 }

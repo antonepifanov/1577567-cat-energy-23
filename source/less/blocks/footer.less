@@ -42,9 +42,6 @@
     padding-bottom: 0;
     border-bottom: none;
   });
-
-  .desktop({
-  });
 }
 
 .footer__socials {
@@ -61,12 +58,17 @@
     border-top: none;
     gap: 22px;
   });
+
+  &:hover .footer__link-logo {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__link-text {
   margin-right: auto;
   color: @text;
-}
-
-.footer__link-logo {
 }
