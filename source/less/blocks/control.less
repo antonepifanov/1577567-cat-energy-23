@@ -14,6 +14,7 @@
 
 .control__button {
   cursor: pointer;
+  box-sizing: content-box;
   border: none;
   background: none;
   height: 32px;
@@ -21,12 +22,25 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.25;
+  transition: @transition;
 
   .tablet({
     font-size: 20px;
     line-height: 1;
-    border-bottom: 1px dotted @bottom-border;
+    border-bottom: 1px dotted fade(@black, 40%);
   });
+
+  &:hover {
+    .tablet({
+      border-bottom: 1px solid fade(@black, 40%);
+    });
+  }
+
+  &:active {
+    .tablet({
+      border-bottom: none;
+    });
+  }
 }
 
 .control__range {
@@ -66,7 +80,17 @@
     border-radius: 50%;
     border: 1px solid @range-border;
     background-color: @white;
+    box-shadow: 0 1px 3px 0 fade(@black, 16%);
   });
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 fade(@black, 19%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 fade(@black, 20%);
+    border-color: @green;
+  }
 
   &::after {
     .tablet({

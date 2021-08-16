@@ -98,6 +98,8 @@
     width: 60px;
     height: 60px;
     background-color: @green;
+    background-position: center center;
+    background-repeat: no-repeat;
 
     .tablet({
       width: 80px;
@@ -123,13 +125,25 @@
 }
 
 .advantages__item-eco {
+  &::before {
+    background-image: url("../img/icon_leaf.svg");
+  }
 }
 
 .advantages__item-easy {
+  &::before {
+    background-image: url("../img/icon_tub.svg");
+  }
 }
 
 .advantages__item-change {
+  &::before {
+    background-image: url("../img/icon_eat.svg");
+  }
 }
 
 .advantages__item-result {
+  &::before {
+    background-image: url("../img/icon_alarm.svg");
+  }
 }

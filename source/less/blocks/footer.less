@@ -28,13 +28,19 @@
   border-bottom: 1px solid @footer-border;
   display: flex;
   justify-content: center;
+  transition: @transition;
+
+  &:hover[href] {
+    opacity: 0.8;
+  }
+
+  &:active[href] {
+    opacity: 0.6;
+  }
 
   .tablet({
     padding-bottom: 0;
     border-bottom: none;
-  });
-
-  .desktop({
   });
 }
 
@@ -52,12 +58,17 @@
     border-top: none;
     gap: 22px;
   });
+
+  &:hover .footer__link-logo {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__link-text {
   margin-right: auto;
   color: @text;
-}
-
-.footer__link-logo {
 }

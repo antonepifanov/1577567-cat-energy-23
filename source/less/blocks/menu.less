@@ -1,3 +1,23 @@
+.menu {
+  background-color: @white;
+
+  .tablet({
+    background-color: transparent;
+    position: static;
+  });
+
+  &--nojs {
+    margin-left: -@padding--mobile;
+    margin-right: -@padding--mobile;
+    position: static;
+
+    .tablet({
+      margin-left: 0;
+      margin-right: 0;
+    });
+  }
+}
+
 .menu__list {
   display: flex;
   flex-direction: column;
@@ -10,9 +30,6 @@
 }
 
 .menu__item {
-  width: calc(100% + @padding--mobile*2);
-  margin-left: -@padding--mobile;
-  margin-right: -@padding--mobile;
   border-top: 1px solid @menu-border;
   z-index: 20;
 
@@ -43,6 +60,17 @@
   text-transform: uppercase;
   color: @black;
   padding: 23px 0;
+  transition: @transition;
+
+  &[href]:hover {
+    .tablet({
+      opacity: 0.6;
+    });
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 
   .tablet({
     font-size: 18px;
@@ -98,6 +126,78 @@
   }
 }
 
-.menu__button--hidden {
+.menu__button {
+  position: absolute;
+  top: -43px;
+  right: 23px;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  .tablet({
+    display: none;
+  });
+}
+
+.menu--closed .menu__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: @black;
+  box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+}
+
+.menu--closed .menu__button:active::before {
+  background-color: fade(@black, 30%);
+  box-shadow:
+    0 8px 0 0 fade(@black, 30%),
+    0 16px 0 0 fade(@black, 30%);
+}
+
+.menu--closed .menu__list {
   display: none;
+
+  .tablet({
+    display: flex;
+  });
+}
+
+.menu--opened .menu__button {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@black, 30%);
+  }
+}
+
+.menu--nojs .menu__button {
+  display: none;
+}
+
+.menu--nojs .menu__list {
+  display: flex;
 }
