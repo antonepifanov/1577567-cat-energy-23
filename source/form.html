@@ -42,7 +42,9 @@
           <p class="questionnaire__lead">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-          <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="POST">
+        </div>
+        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="form__wrapper">
             <div class="form__section">
               <fieldset class="form__data">
                 <legend class="visually-hidden">Данные кота</legend>
@@ -79,10 +81,12 @@
                 </ul>
               </fieldset>
             </div>
-            <fieldset class="form__contacts">
-              <legend class="form__contacts-legend title title--green-line">
-                <span class="title__accent">Контактные данные (владельца кота)</span>
-              </legend>
+          </div>
+          <fieldset class="form__contacts">
+            <legend class="form__contacts-legend title title--green-line">
+              <span class="title__accent title__accent--two-lines">Контактные данные (владельца кота)</span>
+            </legend>
+            <div class="form__wrapper">
               <ul class="form__contacts-list">
                 <li class="form__contacts-item input-field">
                   <input class="input-field__input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -93,16 +97,24 @@
                   <label class="input-field__label" for="phone">Телефон:*</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__comment">
-              <legend class="form__comment-legend title title--green-line">Комментарий</legend>
+            </div>
+          </fieldset>
+          <fieldset class="form__comment">
+            <legend class="form__comment-legend title title--green-line">
+              <span class="title__accent">Комментарий</span>
+            </legend>
+            <div class="form__wrapper">
               <p class="form__comment-wrapper">
                 <textarea class="form__comment-textarea" id="comment" name="comment"></textarea>
                 <label class="form__comment-label" for="comment">Расскажите обо всех повадках кота</label>
               </p>
-            </fieldset>
-            <fieldset class="form__addition">
-              <legend class="form__addition-legend title title--green-line">Дополнительно</legend>
+            </div>
+          </fieldset>
+          <fieldset class="form__addition">
+            <legend class="form__addition-legend title title--green-line">
+              <span class="title__accent">Дополнительно</span>
+            </legend>
+            <div class="form__wrapper">
               <ul class="form__addition-list">
                 <li class="form__addition-item">
                   <input class="form__addition-input" id="sugar" type="checkbox" name="sugar" checked>
@@ -121,11 +133,13 @@
                   <label class="form__addition-label" for="vitamins">Витамины</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
+          </fieldset>
+          <div class="form__wrapper">
             <button class="form__button button button--green button--high" type="submit">Отправить заявку</button>
             <strong class="form__note">* — Обязательные поля</strong>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
       <section class="info">
         <h2 class="visually-hidden">Информация о компании</h2>

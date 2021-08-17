@@ -1,8 +1,20 @@
 .form legend {
-  padding-left: @padding--mobile;
-  padding-right: @padding--mobile;
-  margin-left: -@padding--mobile;
-  margin-right: -@padding--mobile;
+  display: block;
+  width: 100%;
+}
+
+.form__wrapper {
+  .container();
+
+  .tablet({
+    padding-left: 70px;
+    padding-right: 70px;
+  });
+
+  .desktop({
+    padding-left: @padding--desktop;
+    padding-right: @padding--desktop;
+  });
 }
 
 .form__section {

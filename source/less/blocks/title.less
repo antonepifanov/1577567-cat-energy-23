@@ -32,7 +32,6 @@
 }
 
 .title__accent {
-  display: inline-block;
   background-color: @white;
   position: relative;
   z-index: 20;
@@ -43,4 +42,13 @@
     padding-left: 36px;
     padding-right: 36px;
   });
+
+  &--two-lines {
+    display: inline-block;
+    max-width: 225px;
+
+    .tablet({
+      max-width: unset;
+    });
+  }
 }
