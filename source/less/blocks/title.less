@@ -14,25 +14,33 @@
 }
 
 .title--green-line {
-  background-color: red;
   position: relative;
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: @padding--mobile;
 
-  span {
-    background-color: @white;
-    z-index: 20;
-  }
+  .tablet({
+    padding-left: @padding--tablet;
+  });
 
   &::before {
     position: absolute;
     content: "";
-    top: 15px;
-    left: @padding--mobile;
-    width: 100%;
+    top: calc(50% + 4px);
+    left: 0;
+    right: 0;
     height: 2px;
     background-color: @green;
-    z-index: 10;
   }
+}
+
+.title__accent {
+  display: inline-block;
+  background-color: @white;
+  position: relative;
+  z-index: 20;
+  padding-right: 22px;
+  padding-left: @padding--mobile;
+
+  .tablet({
+    padding-left: 36px;
+    padding-right: 36px;
+  });
 }
