@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <header class="header">
@@ -42,7 +46,9 @@
           <p class="questionnaire__lead">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-          <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="POST">
+        </div>
+        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="form__wrapper">
             <div class="form__section">
               <fieldset class="form__data">
                 <legend class="visually-hidden">Данные кота</legend>
@@ -65,65 +71,92 @@
                 <legend class="visually-hidden">Выбор программы</legend>
                 <ul class="form__program-list">
                   <li class="form__program-item">
-                    <input class="form__program-input" id="slimming" type="radio" name="program" value="slimming" checked>
+                    <input class="form__program-input visually-hidden" id="slimming" type="radio" name="program" value="slimming" checked>
                     <label class="form__program-label" for="slimming">Похудение</label>
                   </li>
                   <li class="form__program-item">
-                    <input class="form__program-input" id="gain" type="radio" name="program" value="gain">
+                    <input class="form__program-input visually-hidden" id="gain" type="radio" name="program" value="gain">
                     <label class="form__program-label" for="gain">Набор массы</label>
                   </li>
                   <li class="form__program-item">
-                    <input class="form__program-input" id="advice" type="radio" name="program" value="advice">
+                    <input class="form__program-input visually-hidden" id="advice" type="radio" name="program" value="advice">
                     <label class="form__program-label" for="advice">Не знаю (Нужен ваш совет)</label>
                   </li>
                 </ul>
               </fieldset>
             </div>
-            <fieldset class="form__contacts">
-              <legend class="form__contacts-legend title title--green-line">Контактные данные (владельца кота)</legend>
+          </div>
+          <fieldset class="form__contacts">
+            <legend class="form__contacts-legend title title--green-line">
+              <span class="title__accent title__accent--two-lines">Контактные данные (владельца кота)</span>
+            </legend>
+            <div class="form__wrapper">
               <ul class="form__contacts-list">
                 <li class="form__contacts-item input-field">
                   <input class="input-field__input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                   <label class="input-field__label" for="email">E-mail:*</label>
+                  <svg class="input-field__icon" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0.65" y1="5.84766" x2="0.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                    <line x1="17.65" y1="5.84766" x2="17.65" y2="13.8477" stroke="#222222" stroke-width="1.3"/>
+                    <line y1="13.1977" x2="18" y2="13.1977" stroke="#222222" stroke-width="1.3"/>
+                    <line y1="1.19766" x2="18" y2="1.19766" stroke="#222222" stroke-width="1.3"/>
+                    <path d="M17.35 3.02975L9.00002 9.5242L0.65 3.02975V1.49766H3.5L9.00002 1.49766H14H17.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
+                  </svg>
                 </li>
                 <li class="form__contacts-item input-field">
                   <input class="input-field__input" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
                   <label class="input-field__label" for="phone">Телефон:*</label>
+                  <svg class="input-field__icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path d="M17.9 9.75275H9.39999V10.9569H17.9L15.8 13.0641L16.7 13.9672L19.8 10.8565C19.8974 10.7263 19.95 10.5678 19.95 10.405C19.95 10.2421 19.8974 10.0837 19.8 9.95344L16.7 6.84277L15.8 7.74587L17.9 9.75275Z" fill="black"/>
+                      <path d="M8.10001 19.7872V13.5659C8.08846 13.41 8.02154 13.2635 7.91142 13.153C7.80131 13.0425 7.65531 12.9754 7.50001 12.9638H3.10001C3.10516 13.2815 3.23325 13.5848 3.45718 13.8095C3.68112 14.0342 3.98336 14.1627 4.30001 14.1679H6.80001V19.1851H3.10001C2.86326 19.2 2.62591 19.1676 2.40176 19.0896C2.17762 19.0117 1.97115 18.8898 1.79436 18.7311C1.61757 18.5723 1.47399 18.3799 1.37196 18.165C1.26992 17.9501 1.21148 17.717 1.20001 17.4793V3.43111C1.19181 2.96681 1.36516 2.51774 1.68292 2.18013C2.00069 1.84252 2.43758 1.64322 2.90001 1.62492H6.80001V6.64212H4.40001C4.08336 6.64729 3.78112 6.77581 3.55718 7.00052C3.33325 7.22523 3.20516 7.52851 3.20001 7.84625H7.60001C7.75531 7.83466 7.90131 7.76751 8.01142 7.65701C8.12154 7.54651 8.18846 7.40002 8.20001 7.24418V0.922517C8.15232 0.76584 8.06117 0.626022 7.93721 0.519407C7.81325 0.412792 7.66161 0.343785 7.50001 0.320453H3.10001C2.70599 0.307054 2.31321 0.371716 1.94411 0.510744C1.57501 0.649771 1.23684 0.860436 0.948933 1.13069C0.661026 1.40095 0.42903 1.7255 0.266207 2.08579C0.103385 2.44608 0.01293 2.83504 1.46306e-05 3.23043V17.1782C-0.0289644 17.5773 0.0246504 17.978 0.157487 18.3552C0.290324 18.7324 0.499509 19.078 0.771886 19.3701C1.04426 19.6623 1.37394 19.8947 1.74019 20.0529C2.10643 20.211 2.50132 20.2913 2.90001 20.2889H7.50001C7.5735 20.304 7.64943 20.3022 7.72216 20.2839C7.7949 20.2655 7.86259 20.2309 7.92021 20.1828C7.97783 20.1346 8.02391 20.074 8.05504 20.0055C8.08616 19.9371 8.10153 19.8624 8.10001 19.7872Z" fill="black"/>
+                    </g>
+                  </svg>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="form__comment">
-              <legend class="form__comment-legend title title--green-line">Комментарий</legend>
+            </div>
+          </fieldset>
+          <fieldset class="form__comment">
+            <legend class="form__comment-legend title title--green-line">
+              <span class="title__accent">Комментарий</span>
+            </legend>
+            <div class="form__wrapper">
               <p class="form__comment-wrapper">
                 <textarea class="form__comment-textarea" id="comment" name="comment"></textarea>
                 <label class="form__comment-label" for="comment">Расскажите обо всех повадках кота</label>
               </p>
-            </fieldset>
-            <fieldset class="form__addition">
-              <legend class="form__addition-legend title title--green-line">Дополнительно</legend>
+            </div>
+          </fieldset>
+          <fieldset class="form__addition">
+            <legend class="form__addition-legend title title--green-line">
+              <span class="title__accent">Дополнительно</span>
+            </legend>
+            <div class="form__wrapper">
               <ul class="form__addition-list">
                 <li class="form__addition-item">
-                  <input class="form__addition-input" id="sugar" type="checkbox" name="sugar" checked>
+                  <input class="form__addition-input visually-hidden" id="sugar" type="checkbox" name="sugar" checked>
                   <label class="form__addition-label" for="sugar">Сахарозаменитель</label>
                 </li>
                 <li class="form__addition-item">
-                  <input class="form__addition-input" id="water" type="checkbox" name="water">
+                  <input class="form__addition-input visually-hidden" id="water" type="checkbox" name="water">
                   <label class="form__addition-label" for="water">Питьевая вода</label>
                 </li>
                 <li class="form__addition-item">
-                  <input class="form__addition-input" id="milk" type="checkbox" name="milk">
+                  <input class="form__addition-input visually-hidden" id="milk" type="checkbox" name="milk">
                   <label class="form__addition-label" for="milk">Молоко</label>
                 </li>
                 <li class="form__addition-item">
-                  <input class="form__addition-input" id="vitamins" type="checkbox" name="vitamins">
+                  <input class="form__addition-input visually-hidden" id="vitamins" type="checkbox" name="vitamins">
                   <label class="form__addition-label" for="vitamins">Витамины</label>
                 </li>
               </ul>
-            </fieldset>
-            <button class="form__button button button--green" type="submit">Отправить заявку</button>
+            </div>
+          </fieldset>
+          <div class="form__wrapper">
+            <button class="form__button button button--green button--high" type="submit">Отправить заявку</button>
             <strong class="form__note">* — Обязательные поля</strong>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
       <section class="info">
         <h2 class="visually-hidden">Информация о компании</h2>

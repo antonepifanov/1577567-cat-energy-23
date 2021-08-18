@@ -14,4 +14,45 @@
 }
 
 .title--green-line {
+  position: relative;
+
+  .tablet({
+    padding-left: @padding--tablet;
+  });
+
+  .desktop({
+    padding-left: 74px;
+  });
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: calc(50% + 4px);
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: @green;
+  }
+}
+
+.title__accent {
+  background-color: @white;
+  position: relative;
+  z-index: 20;
+  padding-right: 22px;
+  padding-left: @padding--mobile;
+
+  .tablet({
+    padding-left: 36px;
+    padding-right: 36px;
+  });
+
+  &--two-lines {
+    display: inline-block;
+    max-width: 225px;
+
+    .tablet({
+      max-width: unset;
+    });
+  }
 }
