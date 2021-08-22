@@ -3,6 +3,7 @@
   align-items: center;
   padding-bottom: 16px;
   transition: @transition;
+  flex-shrink: 0;
 
   &:hover[href] {
     opacity: 0.8;
@@ -23,19 +24,14 @@
 
   .tablet({
     margin-right: 0;
+    width: 174px;
+    height: 51px;
   });
 
-  img {
-    .tablet({
-      width: 174px;
-      height: 51px;
-    });
-
-    .desktop({
-      width: 202px;
-      height: 59px;
-    });
-  }
+  .desktop({
+    width: 202px;
+    height: 59px;
+  });
 }
 
 .logo__text {

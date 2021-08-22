@@ -67,17 +67,31 @@
   gap: 48px;
   text-align: center;
 
+  .retina({
+    background-image: url("../img/bonus-mobile@2x.png");
+  });
+
   .tablet({
+    background-image: url("../img/bonus-tablet.png");
     padding: 57px 124px 60px 78px;
     flex-direction: row;
     gap: unset;
     justify-content: space-between;
+
+    .retina({
+      background-image: url("../img/bonus-tablet@2x.png");
+    });
   });
 
   .desktop({
+    background-image: url("../img/bonus-desktop.png");
     padding: 56px 41px 41px;
     flex-direction: column;
     width: calc(100% - 73% - 79px);
+
+    .retina({
+      background-image: url("../img/bonus-desktop@2x.png");
+    });
   });
 
   &::before {
