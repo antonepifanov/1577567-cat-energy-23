@@ -12,9 +12,6 @@
   });
 }
 
-.input-field__label {
-}
-
 .input-field__input {
   padding: 13px 15px;
   min-height: 46px;
@@ -33,6 +30,15 @@
   &:focus {
     outline: none;
     border: 2px solid @text;
+
+    & ~ .input-field__icon--mail {
+      fill: none;
+      stroke: @green;
+    }
+
+    & ~ .input-field__icon--phone {
+      fill: @green;
+    }
   }
 
   &:valid {
@@ -42,6 +48,15 @@
   &:focus:invalid,
   &:not(:focus):not(:placeholder-shown):invalid {
     border: 2px solid @error;
+
+    & ~ .input-field__icon--mail {
+      fill: none;
+      stroke: @error;
+    }
+
+    & ~ .input-field__icon--phone {
+      fill: @error;
+    }
   }
 
   &::placeholder {
@@ -69,4 +84,13 @@
   .tablet({
     right: 18px;
   });
+}
+
+.input-field__icon--mail {
+  fill: none;
+  stroke: @card-title;
+}
+
+.input-field__icon--phone {
+  fill: @card-title;
 }

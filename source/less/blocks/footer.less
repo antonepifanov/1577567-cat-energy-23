@@ -44,9 +44,6 @@
   });
 }
 
-.footer__socials {
-}
-
 .footer__link {
   display: flex;
   align-items: center;
@@ -59,10 +56,6 @@
     gap: 22px;
   });
 
-  &:hover .footer__link-logo {
-    fill: @green;
-  }
-
   &:active {
     opacity: 0.3;
   }
@@ -72,3 +65,12 @@
   margin-right: auto;
   color: @text;
 }
+
+.footer__link-logo {
+  fill: @link-color;
+}
+
+.footer__link:hover .footer__link-logo {
+  fill: @green;
+}
+
