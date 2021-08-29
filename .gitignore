@@ -13,6 +13,10 @@ source/css/*.map
 Thumbs.db
 .csscomb.json
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+build/
+>>>>>>> dd69e9e (сборка)
 =======
 build/
 >>>>>>> dd69e9e (сборка)

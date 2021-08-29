@@ -5,7 +5,10 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dd69e9e (сборка)
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
@@ -13,6 +16,9 @@ const terser = require("gulp-terser");
 const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const del = require("del");
+<<<<<<< HEAD
+>>>>>>> dd69e9e (сборка)
+=======
 >>>>>>> dd69e9e (сборка)
 const sync = require("browser-sync").create();
 
@@ -25,17 +31,23 @@ const styles = () => {
     .pipe(less())
     .pipe(postcss([
 <<<<<<< HEAD
+<<<<<<< HEAD
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
 =======
+=======
+>>>>>>> dd69e9e (сборка)
       autoprefixer(),
       csso()
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
+<<<<<<< HEAD
+>>>>>>> dd69e9e (сборка)
+=======
 >>>>>>> dd69e9e (сборка)
     .pipe(sync.stream());
 }
@@ -43,7 +55,10 @@ const styles = () => {
 exports.styles = styles;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dd69e9e (сборка)
 // HTML
 
 const html = () => {
@@ -114,6 +129,9 @@ const clean = () => {
   return del("build");
 };
 
+<<<<<<< HEAD
+>>>>>>> dd69e9e (сборка)
+=======
 >>>>>>> dd69e9e (сборка)
 // Server
 
@@ -121,7 +139,11 @@ const server = (done) => {
   sync.init({
     server: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       baseDir: 'source'
+=======
+      baseDir: "build"
+>>>>>>> dd69e9e (сборка)
 =======
       baseDir: "build"
 >>>>>>> dd69e9e (сборка)
@@ -136,6 +158,7 @@ const server = (done) => {
 exports.server = server;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Watcher
 
 const watcher = () => {
@@ -147,6 +170,8 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 =======
+=======
+>>>>>>> dd69e9e (сборка)
 // Reload
 
 const reload = (done) => {
@@ -195,4 +220,7 @@ exports.default = gulp.series(
     server,
     watcher
   ));
+<<<<<<< HEAD
+>>>>>>> dd69e9e (сборка)
+=======
 >>>>>>> dd69e9e (сборка)

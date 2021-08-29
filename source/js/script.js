@@ -13,7 +13,10 @@ navToggle.addEventListener('click', function() {
   }
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dd69e9e (сборка)
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
@@ -41,4 +44,7 @@ ymaps.ready(function () {
       .add(myPlacemark)
 });
 
+<<<<<<< HEAD
+>>>>>>> dd69e9e (сборка)
+=======
 >>>>>>> dd69e9e (сборка)
