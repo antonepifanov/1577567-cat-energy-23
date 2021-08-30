@@ -132,13 +132,16 @@
               <ul class="compare-slider__list">
                 <li class="compare-slider__item compare-slider__item--active">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/cats-desktop.webp 1x, img/cats-desktop@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/cats-desktop.png 1x, img/cats-desktop@2x.png 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/cats-tablet.webp 1x, img/cats-tablet@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/cats-tablet.png 1x, img/cats-tablet@2x.png 2x">
+                    <source type="image/webp" srcset="img/fat-cat-mobile.webp 1x, img/fat-cat-mobile@2x.webp 2x">
                     <img class="compare-slider__image" src="img/fat-cat-mobile.png" srcset="img/fat-cat-mobile@2x.png 2x" width="311" height="232" alt="Изображение толстого кота">
                   </picture>
                 </li>
                 <li class="compare-slider__item">
-                  <img class="compare-slider__image" src="img/thin-cat-mobile.png" srcset="img/thin-cat-mobile@2x.png 2x" width="251" height="240" alt="Изображение худого кота">
+                  <img class="compare-slider__image" src="img/thin-cat-mobile.png" srcset="img/thin-cat-mobile@2x.png 2x" width="251" height="240" alt="Изображение худого кота" loading="lazy">
                 </li>
               </ul>
               <div class="compare-slider__control control">
@@ -204,7 +207,7 @@
         </ul>
         <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener" target="_blank">
           <span class="footer__link-text">HTML Academy</span>
-          <svg class="footer__link-logo" width="27" height="34">
+          <svg class="footer__link-logo" width="40" height="46">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
