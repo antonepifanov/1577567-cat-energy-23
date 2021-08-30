@@ -11,7 +11,7 @@
 
 .card__wrapper {
   .container();
-  padding: 19px 20px 25px;
+  padding: 19px 20px 24px;
   display: grid;
   grid-template-columns: 140px 3fr 2fr;
   grid-template-rows: repeat(3, auto);
@@ -35,13 +35,18 @@
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 
   .tablet({
     font-size: 20px;
     max-width: 145px;
     text-align: center;
+    margin-top: 32px;
     margin-bottom: 21px;
+  });
+
+  .desktop ({
+    margin-top: 45px;
   });
 }
 
@@ -103,10 +108,7 @@
 .card__description-item {
   display: flex;
   justify-content: space-between;
-
-  &:not(:last-of-type) {
-    margin-bottom: 2px;
-  }
+  gap: 2px;
 
   .tablet({
     padding-bottom: 9px;
@@ -116,9 +118,6 @@
       margin-bottom: 5px;
     }
   });
-}
-
-.card__description-termin {
 }
 
 .card__description-definition {

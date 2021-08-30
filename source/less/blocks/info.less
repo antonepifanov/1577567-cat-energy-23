@@ -19,8 +19,8 @@
   justify-content: center;
 
   .tablet({
-    padding-top: 62px;
-    padding-bottom: 58px;
+    padding-top: 65px;
+    padding-bottom: 62px;
     padding-left: calc(@padding--tablet + 41px);
     padding-right: calc(@padding--tablet + 41px);
   });
@@ -44,7 +44,7 @@
 
   .tablet({
     font-size: 20px;
-    line-height: 1.1;
+    line-height: 1.2;
   });
 }
 
@@ -61,7 +61,7 @@
 
   .tablet({
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.1;
     max-width: 160px;
     text-align: right;
   });
@@ -78,23 +78,6 @@
   .tablet({
     height: 400px;
   });
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 57px;
-    height: 53px;
-    top: calc(50% - 40px);
-    left: calc(50% - 28.5px);
-    background-image: url("../img/map-pin.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 15;
-
-    .retina({
-      background-image: url("../img/map-pin@2x.png");
-    });
-  }
 }
 
 .info__map-image {

@@ -27,11 +27,15 @@
   &::before {
     position: absolute;
     content: "";
-    top: calc(50% + 4px);
+    top: 16px;
     left: 0;
     right: 0;
     height: 2px;
     background-color: @green;
+
+    .tablet({
+      top: 26px;
+    });
   }
 }
 
