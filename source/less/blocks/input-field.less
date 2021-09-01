@@ -13,14 +13,17 @@
 }
 
 .input-field__input {
-  padding: 13px 15px;
-  min-height: 46px;
+  appearance: none;
+  padding-left: 15px;
+  padding-right: 50px;
+  min-height: 45px;
   border: 1px solid @input-border;
   flex-grow: 1;
+  transition: @transition;
 
   .tablet({
     min-height: 52px;
-    padding: 10px 19px;
+    padding-left: 19px;
   });
 
   &:hover {
@@ -61,17 +64,23 @@
 
   &::placeholder {
     font-size: 16px;
-    line-height: 1.13;
+    line-height: 45px;
     color: @text;
     text-transform: uppercase;
 
     .tablet({
       font-size: 20px;
+      line-height: 52px;
     });
   }
 
   &:focus::placeholder {
     color: transparent;
+  }
+
+  &::-moz-placeholder,
+  &:-moz-placeholder {
+    opacity: 1;
   }
 }
 
@@ -80,6 +89,7 @@
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: @transition;
 
   .tablet({
     right: 18px;

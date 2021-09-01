@@ -1,3 +1,16 @@
+.form {
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  input[type="number"],
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    appearance: none;
+  }
+}
+
 .form__wrapper {
   .container();
 
@@ -107,6 +120,10 @@
       height: 40px;
     });
   }
+}
+
+.form__program-input:focus + .form__program-label::before {
+  border: 1px solid @text;
 }
 
 .form__program-input:not(:disabled) + .form__program-label {
@@ -312,6 +329,7 @@
 
   .desktop({
     display: flex;
+    flex-wrap: wrap;
     gap: 104px;
   });
 }
@@ -350,6 +368,7 @@
 
   &::before {
     content: "";
+    flex-shrink: 0;
     width: 30px;
     height: 30px;
     border: 1px solid @range-border;
@@ -390,6 +409,10 @@
 
 .form__addition-input:disabled + .form__addition-label {
   opacity: 0.3;
+}
+
+.form__addition-input:focus + .form__addition-label::before {
+  border: 1px solid @text;
 }
 
 .form__button {
