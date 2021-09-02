@@ -48,20 +48,6 @@
     background-color: @white;
   }
 
-  &:focus:invalid,
-  &:not(:focus):not(:placeholder-shown):invalid {
-    border: 2px solid @error;
-
-    & ~ .input-field__icon--mail {
-      fill: none;
-      stroke: @error;
-    }
-
-    & ~ .input-field__icon--phone {
-      fill: @error;
-    }
-  }
-
   &::placeholder {
     font-size: 16px;
     line-height: 45px;
@@ -81,6 +67,19 @@
   &::-moz-placeholder,
   &:-moz-placeholder {
     opacity: 1;
+  }
+}
+
+.input-field__input--invalid {
+  border: 2px solid @error;
+
+  & ~ .input-field__icon--mail {
+    fill: none;
+    stroke: @error;
+  }
+
+  & ~ .input-field__icon--phone {
+    fill: @error;
   }
 }
 

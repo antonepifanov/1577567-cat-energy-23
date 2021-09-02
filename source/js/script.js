@@ -33,3 +33,18 @@ ymaps.ready(function () {
   myMap.geoObjects.add(myPlacemark)
   myMap.behaviors.disable("scrollZoom")
 })
+
+const initValidating = () => {
+  const form = document.querySelector(".form")
+  const inputsToValidate = form.querySelectorAll("input:required")
+  form.addEventListener("submit", function() {
+    for (let input of inputsToValidate) {
+      if (!input.checkValidity()) {
+        input.classList.add("input-field__input--invalid")
+      } else if (input.classList.contains("input-field__input--invalid")) {
+        input.classList.remove("input-field__input--invalid")
+      }
+    }
+  })
+}
+initValidating()
