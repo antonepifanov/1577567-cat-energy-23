@@ -36,8 +36,9 @@ ymaps.ready(function () {
 
 const initValidating = () => {
   const form = document.querySelector(".form")
-  const inputsToValidate = form.querySelectorAll("input:required")
-  form.addEventListener("submit", function() {
+  const submitButton = form.querySelector(".form__submit-button")
+  let inputsToValidate = form.querySelectorAll("input:required")
+  submitButton.addEventListener("click", function() {
     for (let input of inputsToValidate) {
       if (!input.checkValidity()) {
         input.classList.add("input-field__input--invalid")
@@ -47,4 +48,4 @@ const initValidating = () => {
     }
   })
 }
-initValidating()
+initValidating();

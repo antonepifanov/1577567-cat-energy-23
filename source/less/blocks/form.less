@@ -29,20 +29,21 @@
   margin-bottom: 26px;
 
   .tablet({
-    margin-bottom: 68px;
+    margin-bottom: 72px;
   });
 
   .desktop({
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    margin-bottom: 69px;
   });
 }
 
 .form__data {
   border: none;
   .list-style();
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 
   .tablet({
     margin-bottom: 72px;
@@ -58,7 +59,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 13px;
+  gap: 15px;
 
   .tablet({
     gap: 20px;
@@ -83,13 +84,13 @@
 
 .form__program-list {
   .list-style();
-  padding: 20px @padding--mobile;
+  padding: 21px @padding--mobile 17px;
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 14px;
 
   .tablet({
-    padding: 25px 28px;
+    padding: 25px 28px 22px;
   });
 }
 
@@ -166,7 +167,7 @@
 .form__contacts {
   .list-style();
   border: none;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 
   .tablet({
     margin-bottom: 65px;
@@ -182,7 +183,7 @@
   width: 100%;
   font-size: 24px;
   line-height: 1.1;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   color: @black;
 
   .tablet({
@@ -192,6 +193,7 @@
 
   .desktop({
     padding-left: calc((100% - 1220px - 72px) / 2);
+    margin-bottom: 74px;
   });
 }
 
@@ -225,7 +227,7 @@
   margin-bottom: 23px;
 
   .tablet({
-    margin-bottom: 65px;
+    margin-bottom: 62px;
   });
 
   .desktop({
@@ -294,7 +296,7 @@
 .form__addition {
   .list-style();
   border: none;
-  margin-bottom: 34px;
+  margin-bottom: 31px;
 
   .tablet({
     margin-bottom: 54px;
@@ -320,6 +322,7 @@
 
   .desktop({
     padding-left: calc((100% - 1220px - 72px) / 2);
+    margin-bottom: 56px;
   });
 }
 
@@ -429,7 +432,7 @@
   border: 1px solid @bottom-border;
 }
 
-.form__button {
+.form__submit-button {
   min-width: 100%;
   margin-bottom: 19px;
 
@@ -455,7 +458,10 @@
   line-height: 1.4;
 
   .tablet({
+    position: relative;
+    top: -5px;
     display: inline-flex;
-    align-items: flex-start;font-size: 16px
+    font-size: 16px;
+    line-height: 1;
   });
 }

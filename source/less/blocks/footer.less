@@ -10,7 +10,7 @@
   flex-direction: column;
 
   .tablet({
-    padding-top: 55px;
+    padding-top: 49px;
     padding-bottom: 61px;
     flex-direction: row;
     justify-content: space-between;
@@ -47,14 +47,14 @@
 .footer__link {
   display: flex;
   align-items: center;
-  padding-top: 22px;
+  padding-top: 17px;
   border-top: 1px solid @footer-border;
   transition: @transition;
 
   .tablet({
     padding: 0;
     border-top: none;
-    gap: 22px;
+    gap: 18px;
   });
 
   &:active {
@@ -72,6 +72,7 @@
 .footer__link-logo {
   fill: @link-color;
   transition: @transition;
+  margin-right: -5px;
 }
 
 .footer__link:hover .footer__link-logo {
