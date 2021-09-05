@@ -5,22 +5,31 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 
   .tablet({
     font-size: 20px;
+    gap: 16px;
   });
 }
 
+.input-field__label {
+  flex-shrink: 0;
+}
+
 .input-field__input {
-  padding: 13px 15px;
-  min-height: 46px;
+  appearance: none;
+  padding-left: 15px;
+  height: 45px;
+  line-height: 41px;
   border: 1px solid @input-border;
   flex-grow: 1;
+  transition: @transition;
 
   .tablet({
-    min-height: 52px;
-    padding: 10px 19px;
+    height: 52px;
+    padding-left: 19px;
+    line-height: 48px;
   });
 
   &:hover {
@@ -45,33 +54,25 @@
     background-color: @white;
   }
 
-  &:focus:invalid,
-  &:not(:focus):not(:placeholder-shown):invalid {
-    border: 2px solid @error;
-
-    & ~ .input-field__icon--mail {
-      fill: none;
-      stroke: @error;
-    }
-
-    & ~ .input-field__icon--phone {
-      fill: @error;
-    }
-  }
-
   &::placeholder {
     font-size: 16px;
-    line-height: 1.13;
+    line-height: 45px;
     color: @text;
     text-transform: uppercase;
 
     .tablet({
       font-size: 20px;
+      line-height: 52px;
     });
   }
 
   &:focus::placeholder {
     color: transparent;
+  }
+
+  &::-moz-placeholder,
+  &:-moz-placeholder {
+    opacity: 1;
   }
 }
 
@@ -80,9 +81,10 @@
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: @transition;
 
   .tablet({
-    right: 18px;
+    right: 15px;
   });
 }
 
@@ -93,4 +95,18 @@
 
 .input-field__icon--phone {
   fill: @card-title;
+}
+
+
+.input-field__input--invalid:not(:valid) {
+  border: 2px solid @error;
+
+  & ~ .input-field__icon--mail {
+    fill: none;
+    stroke: @error;
+  }
+
+  & ~ .input-field__icon--phone {
+    fill: @error;
+  }
 }

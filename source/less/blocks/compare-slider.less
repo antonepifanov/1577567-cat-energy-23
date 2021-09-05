@@ -1,15 +1,15 @@
-.compare-slider {
-
-}
-
 .compare-slider__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 23px;
+  gap: 25px;
+
+  .tablet({
+    gap: 20px;
+  });
 
   .desktop({
-    gap: 17px;
+    gap: 25px;
   });
 }
 
@@ -38,6 +38,9 @@
 }
 
 .compare-slider__image {
+  width: 311px;
+  height: 232px;
+
   .tablet({
     width: 708px;
     height: 535px;
@@ -47,7 +50,4 @@
     width: 690px;
     height: 540px;
   });
-}
-
-.compare-slider__control {
 }

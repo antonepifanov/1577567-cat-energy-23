@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon/favicon.ico">
     <link rel="icon" href="favicon/favicon32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/favicon180.png">
     <link rel="manifest" href="favicon/manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=735219fa-2235-4ca2-89e3-a8b373cf31f3" type="text/javascript" defer></script>
   </head>
   <body>
     <header class="header">
@@ -82,23 +84,23 @@
           <h2 class="advantages__title title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item-eco">
-              <p>
+              <p class="advantages__lead">
                 Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
             <li class="advantages__item advantages__item-easy">
-              <p>
+              <p class="advantages__lead">
                 Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
               </p>
             </li>
             <li class="advantages__item advantages__item-change">
-              <p>
+              <p class="advantages__lead">
                 Замените один-два приема обычной еды на наше функциональное питание.
               </p>
             </li>
             <li class="advantages__item advantages__item-result">
-              <p>
-                Уже через месяц наслаждайтесь изменениями к лучшему<br>вашего питомца!
+              <p class="advantages__lead">
+                Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br>вашего питомца!
               </p>
             </li>
           </ul>
@@ -116,28 +118,34 @@
                 <dt>снижение веса</dt>
                 <dd>5 кг</dd>
               </div>
-            <div class="results__item results__item--accent">
-              <dt>затрачено времени</dt>
-              <dd>60 дней</dd>
-            </div>
-            <div class="results__item results__item--simple">
-              <dt>Затраты на питание:</dt>
-              <dd>15 000 руб.</dd>
-            </div>
-          </dl>
+              <div class="results__item results__item--accent">
+                <dt>затрачено времени</dt>
+                <dd>60 дней</dd>
+              </div>
+              <div class="results__item results__item--simple">
+                <dt>Затраты на питание:</dt>
+                <dd>15 000 руб.</dd>
+              </div>
+            </dl>
           </div>
           <div class="example__slider compare-slider">
             <div class="compare-slider__wrapper">
               <ul class="compare-slider__list">
                 <li class="compare-slider__item compare-slider__item--active">
                   <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/cats-desktop.webp 1x, img/cats-desktop@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="img/cats-desktop.png 1x, img/cats-desktop@2x.png 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/cats-tablet.webp 1x, img/cats-tablet@2x.webp 2x">
                     <source media="(min-width: 768px)" srcset="img/cats-tablet.png 1x, img/cats-tablet@2x.png 2x">
+                    <source type="image/webp" srcset="img/fat-cat-mobile.webp 1x, img/fat-cat-mobile@2x.webp 2x">
                     <img class="compare-slider__image" src="img/fat-cat-mobile.png" srcset="img/fat-cat-mobile@2x.png 2x" width="311" height="232" alt="Изображение толстого кота">
                   </picture>
                 </li>
                 <li class="compare-slider__item">
-                  <img class="compare-slider__image" src="img/thin-cat-mobile.png" srcset="img/thin-cat-mobile@2x.png 2x" width="251" height="240" alt="Изображение худого кота">
+                  <picture>
+                    <source type="image/webp" srcset="img/thin-cat-mobile.webp 1x, img/thin-cat-mobile@2x.webp 2x">
+                    <img class="compare-slider__image" src="img/thin-cat-mobile.png" srcset="img/thin-cat-mobile@2x.png 2x" width="251" height="240" alt="Изображение худого кота" loading="lazy">
+                  </picture>
                 </li>
               </ul>
               <div class="compare-slider__control control">
@@ -164,12 +172,15 @@
           <h3 class="visually-hidden">Расположение компании</h3>
           <div class="info__map-image">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/location-desktop.webp 1x, img/location-desktop@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/location-desktop.jpg 1x, img/location-desktop@2x.jpg 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/location-tablet.webp 1x, img/location-tablet@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/location-tablet.jpg 1x, img/location-tablet@2x.jpg 2x">
-              <img src="img/location.jpg" srcset="img/location@2x.jpg 2x" width="320" height="362" alt="Карта расположения компании Cat Energy">
+              <source type="image/webp" srcset="img/location.webp 1x, img/location@2x.webp 2x">
+              <img src="img/location.jpg" srcset="img/location@2x.jpg 2x" width="320" height="362" alt="Карта расположения компании Cat Energy, расположенной по адресу г. Санкт-Петербург ул. Большая Конюшенная, д. 19/8">
             </picture>
           </div>
-          <iframe class="info__map-frame" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1629653190591!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy" title="Карта с изображением адреса г. Санкт-Петербург, нул. Большая Конюшенная, д. 19/8, по которому находится компания"></iframe>
+          <div class="info__map-frame" id="map"></div>
         </div>
       </section>
     </main>
@@ -203,12 +214,13 @@
         </ul>
         <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener" target="_blank">
           <span class="footer__link-text">HTML Academy</span>
-          <svg class="footer__link-logo" width="27" height="34">
+          <svg class="footer__link-logo" width="40" height="46">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/libs.min.js" defer></script>
+    <script src="js/script.min.js" defer></script>
   </body>
 </html>

@@ -2,13 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 
   .tablet({
-    gap: 14px;
+    gap: 20px;
   });
 
   .desktop({
+    margin-left: 30px;
   });
 }
 
@@ -37,7 +38,7 @@
 
   &:active {
     .tablet({
-      border-bottom: none;
+      border-bottom-color: transparent;
     });
   }
 }
@@ -45,7 +46,7 @@
 .control__range {
   cursor: pointer;
   position: relative;
-  width: 84px;
+  width: 87px;
   height: 14px;
   border-radius: 6px;
   border: 1px solid @range-border;

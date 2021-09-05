@@ -16,20 +16,21 @@
   margin-bottom: 26px;
 
   .tablet({
-    margin-bottom: 65px;
+    margin-bottom: 72px;
   });
 
   .desktop({
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    margin-bottom: 67px;
   });
 }
 
 .form__data {
   border: none;
   .list-style();
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 
   .tablet({
     margin-bottom: 72px;
@@ -45,14 +46,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 11px;
+  gap: 15px;
 
   .tablet({
     gap: 20px;
   });
-}
-
-.form__data-item {
 }
 
 .form__program {
@@ -73,20 +71,14 @@
 
 .form__program-list {
   .list-style();
-  padding: 20px @padding--mobile;
+  padding: 21px @padding--mobile 17px;
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 14px;
 
   .tablet({
-    padding: 25px 28px;
+    padding: 25px 28px 22px;
   });
-}
-
-.form__program-item {
-}
-
-.form__program-input {
 }
 
 .form__program-label {
@@ -110,12 +102,38 @@
     height: 30px;
     border-radius: 50%;
     border: 1px solid @range-border;
+    transition: @transition;
+    flex-shrink: 0;
 
     .tablet({
       width: 40px;
       height: 40px;
     });
   }
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 8px;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: @green;
+    opacity: 0;
+    transition: @transition;
+
+    .tablet({
+      width: 18px;
+      height: 18px;
+      top: calc(50% - 9px);
+      left: 11px;
+    });
+  }
+}
+
+.form__program-input:focus:not(:disabled) + .form__program-label::before {
+  border: 1px solid @bottom-border;
 }
 
 .form__program-input:not(:disabled) + .form__program-label {
@@ -123,21 +141,7 @@
 }
 
 .form__program-input:checked + .form__program-label::after {
-  position: absolute;
-  top: calc(50% - 7px);
-  left: 8px;
-  content: "";
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: @green;
-
-  .tablet({
-    width: 18px;
-    height: 18px;
-    top: calc(50% - 9px);
-    left: 11px;
-  });
+  opacity: 1;
 }
 
 .form__program-input:hover:not(:disabled) + .form__program-label::before {
@@ -151,14 +155,14 @@
 .form__contacts {
   .list-style();
   border: none;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 
   .tablet({
     margin-bottom: 65px;
   });
 
   .desktop({
-    margin-bottom: 69px;
+    margin-bottom: 67px;
   });
 }
 
@@ -167,7 +171,7 @@
   width: 100%;
   font-size: 24px;
   line-height: 1.1;
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   color: @black;
 
   .tablet({
@@ -177,6 +181,7 @@
 
   .desktop({
     padding-left: calc((100% - 1220px - 72px) / 2);
+    margin-bottom: 74px;
   });
 }
 
@@ -185,7 +190,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 14px;
+  gap: 13px;
 
   .tablet({
     gap: 20px;
@@ -210,7 +215,7 @@
   margin-bottom: 23px;
 
   .tablet({
-    margin-bottom: 65px;
+    margin-bottom: 62px;
   });
 
   .desktop({
@@ -236,12 +241,6 @@
   });
 }
 
-.form__comment-wrapper {
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
 .form__comment-textarea {
   width: 100%;
   min-height: 150px;
@@ -258,22 +257,27 @@
   &:focus + label {
     display: none;
   }
-}
 
-.form__comment-label {
-  position: absolute;
-  top: 9px;
-  left: 15px;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 1.13;
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.13;
+    color: @text;
+    text-transform: uppercase;
 
-  .tablet({
-    top: 10px;
-    left: 19px;
-    font-size: 20px;
-    line-height: 1.5;
-  });
+    .tablet({
+      font-size: 20px;
+      line-height: 1.5;
+    });
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &::-moz-placeholder,
+  &:-moz-placeholder {
+    opacity: 1;
+  }
 }
 
 .form__addition {
@@ -286,7 +290,7 @@
   });
 
   .desktop ({
-    margin-bottom: 61px;
+    margin-bottom: 59px;
   });
 }
 
@@ -295,7 +299,7 @@
   width: 100%;
   font-size: 24px;
   line-height: 1;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
   color: @black;
 
   .tablet({
@@ -305,6 +309,7 @@
 
   .desktop({
     padding-left: calc((100% - 1220px - 72px) / 2);
+    margin-bottom: 56px;
   });
 }
 
@@ -315,12 +320,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    column-gap: 123px;
+    column-gap: 60px;
     row-gap: 32px;
   });
 
   .desktop({
     display: flex;
+    flex-wrap: wrap;
     gap: 104px;
   });
 }
@@ -339,7 +345,7 @@
   });
 
   &:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
     .tablet({
       margin-bottom: 0;
@@ -359,13 +365,36 @@
 
   &::before {
     content: "";
+    flex-shrink: 0;
     width: 30px;
     height: 30px;
     border: 1px solid @range-border;
+    transition: @transition;
 
     .tablet({
       width: 40px;
       height: 40px;
+    });
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    content: "";
+    background-image: url("../img/icon-check.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 14px;
+    background-size: cover;
+    transition: @transition;
+    opacity: 0;
+
+    .tablet({
+      width: 24px;
+      height: 19px;
+      left: 8px;
     });
   }
 }
@@ -375,22 +404,7 @@
 }
 
 .form__addition-input:checked + .form__addition-label::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 6px;
-  content: "";
-  background-image: url("../img/icon-check.svg");
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 14px;
-  background-size: cover;
-
-  .tablet({
-    width: 24px;
-    height: 19px;
-    left: 8px;
-  });
+  opacity: 1;
 }
 
 .form__addition-input:hover:not(:disabled) + .form__addition-label::before {
@@ -401,17 +415,18 @@
   opacity: 0.3;
 }
 
-.form__addition-input {
+.form__addition-input:focus:not(:disabled) + .form__addition-label::before {
+  border: 1px solid @bottom-border;
 }
 
-.form__button {
+.form__submit-button {
   min-width: 100%;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 
   .tablet({
     min-width: 282px;
     margin-bottom: 0;
-    margin-right: 61px;
+    margin-right: 60px;
     font-size: 20px;
   });
 
@@ -430,7 +445,10 @@
   line-height: 1.4;
 
   .tablet({
+    position: relative;
+    top: -5px;
     display: inline-flex;
-    align-items: center;
+    font-size: 16px;
+    line-height: 1;
   });
 }

@@ -4,15 +4,16 @@
   &:last-child {
     border-bottom: 1px solid @range-border;
   }
+
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 17px;
   display: flex;
   flex-direction: column;
 
   .tablet({
     border-left: 1px solid @range-border;
     border-right: 1px solid @range-border;
-    padding: 27px 38px;
+    padding: 27px 38px 26px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -22,7 +23,7 @@
   .desktop({
     border-left: none;
     border-right: none;
-    padding: 16px 0;
+    padding: 15px 0 16px;
     gap: unset;
     justify-content: space-between;
   });
@@ -57,9 +58,9 @@
   });
 
   .desktop({
-    margin-right: 38px;
-    justify-content: space-between;
-    width: 33%;
+    margin-right: 40px;
+    width: 32%;
+    margin-bottom: -5px;
   });
 }
 
@@ -69,12 +70,14 @@
   });
 
   .desktop({
-    margin-right: 0;
+    margin-right: auto;
+    padding-right: 5px;
   });
 }
 
 .additional-card__definition {
   margin-left: 0;
+  flex-shrink: 0;
 }
 
 .additional-card__button {
