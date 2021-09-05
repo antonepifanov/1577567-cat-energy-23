@@ -3,6 +3,7 @@ const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
+const concat = require("gulp-concat");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
 const rename = require("gulp-rename");
@@ -52,15 +53,15 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
-const imask = () => {
-  return gulp.src("source/js/imask.js")
+const libs = () => {
+  return gulp.src("source/js/libs/*.js")
+    .pipe(concat("libs.min.js"))
     .pipe(terser())
-    .pipe(rename("imask.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
-exports.imask = imask;
+exports.libs = libs;
 
 
 // Images
@@ -141,7 +142,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/js/imask.js", gulp.series(imask));
+  gulp.watch("source/js/libs/*.js", gulp.series(libs));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -155,7 +156,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
-    imask,
+    libs,
     createWebp
   ),
 );
@@ -173,7 +174,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
-    imask,
+    libs,
     createWebp
   ),
   gulp.series(

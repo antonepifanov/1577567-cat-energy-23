@@ -13,27 +13,6 @@ navToggle.addEventListener("click", function() {
   }
 })
 
-ymaps.ready(function () {
-  var myMap = new ymaps.Map("map", {center: [59.938635, 30.323118], zoom: 17}, {searchControlProvider: "yandex#search"}),
-  myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      hintContent: "",
-      balloonContent: "CatEnergy"
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: "default#image",
-      // Своё изображение иконки метки.
-      iconImageHref: "../img/map-pin.png",
-      // Размеры метки.
-      iconImageSize: [57, 53],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-15, -38]
-    });
-  myMap.geoObjects.add(myPlacemark)
-  myMap.behaviors.disable("scrollZoom")
-})
-
 const initValidating = () => {
   const form = document.querySelector(".form")
   const submitButton = form.querySelector(".form__submit-button")
@@ -51,8 +30,8 @@ const initValidating = () => {
 initValidating();
 
 
-var element = document.getElementById("input[type='tel']")
+var element = document.querySelector("input[type='tel']")
 var maskOptions = {
-  mask: "+{7}(000)000-00-00"
+  mask: "{8} (000) 000-00-00"
 }
 var mask = IMask(element, maskOptions)
