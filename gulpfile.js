@@ -52,6 +52,17 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
+const imask = () => {
+  return gulp.src("source/js/imask.js")
+    .pipe(terser())
+    .pipe(rename("imask.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.imask = imask;
+
+
 // Images
 
 const optimizeImages = () => {
@@ -130,6 +141,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/imask.js", gulp.series(imask));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
@@ -143,6 +155,7 @@ const build = gulp.series(
     styles,
     html,
     scripts,
+    imask,
     createWebp
   ),
 );
@@ -160,6 +173,7 @@ exports.default = gulp.series(
     styles,
     html,
     scripts,
+    imask,
     createWebp
   ),
   gulp.series(
