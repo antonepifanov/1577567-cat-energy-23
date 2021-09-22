@@ -29,9 +29,14 @@ const initValidating = () => {
 }
 initValidating();
 
-
-var element = document.querySelector("input[type='tel']")
-var maskOptions = {
-  mask: "{8} (000) 000-00-00"
+const initPhoneMask = () => {
+  var element = document.querySelector("input[type='tel']")
+  if (!element) {
+    return
+  }
+  var maskOptions = {
+    mask: "{8} (000) 000-00-00"
+  }
+  var mask = IMask(element, maskOptions)
 }
-var mask = IMask(element, maskOptions)
+initPhoneMask()
